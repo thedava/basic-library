@@ -1,0 +1,8 @@
+*.phar
+/vendor/
+.idea
+test/logs
+coverage
+
+# Exclude .gitkeep files
+!.gitkeep

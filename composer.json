@@ -1,0 +1,51 @@
+{
+    "name": "thedava/basic-library",
+    "description": "A basic library for thedava/* projects",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dava"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TheDava\\": "src/TheDava"
+        }
+    },
+    "config": {
+        "autoloader-suffix": "TheDava",
+        "bin-compat": "full"
+    },
+    "require": {
+        "php": ">=5.5",
+        "leafo/scssphp": "^0.6.3",
+        "matthiasmullie/minify": "^1.3",
+        "natxet/cssmin": "^3.0",
+        "zendframework/zend-console": ">=2.5 <2.6",
+        "zendframework/zend-validator": ">=2.5 <2.6",
+        "zendframework/zend-servicemanager": ">=2.5 <2.6",
+        "zendframework/zend-stdlib": ">=2.5 <2.6",
+        "zendframework/zend-filter": ">=2.5 <2.6",
+        "zendframework/zend-inputfilter": ">=2.5 <2.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "satooshi/php-coveralls": "^1.0",
+        "phpunit/php-code-coverage": "~2.1"
+    },
+    "scripts": {
+        "coverage": "php vendor/bin/phpunit --coverage-html coverage",
+        "phplint": "php bin/phplint.php",
+        "phpcs": [
+            "php bin/phpcs.php",
+            "php php-cs-fixer.phar -vv fix --config-file data/php_cs.php"
+        ]
+    },
+    "bin": [
+        "bin/js.php",
+        "bin/phpcs.php",
+        "bin/phplint.php",
+        "bin/scss.php"
+    ]
+}
