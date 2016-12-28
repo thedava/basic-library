@@ -3,6 +3,7 @@
 .idea
 test/logs
 coverage
+.php_cs.cache
 
 # Exclude .gitkeep files
 !.gitkeep
